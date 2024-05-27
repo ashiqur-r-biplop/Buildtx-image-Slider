@@ -54,6 +54,7 @@
 }
 
 .slider-content {
+    position: relative;
     display: flex;
     gap: 12px;
     width: 100%;
@@ -81,4 +82,38 @@
 
 .slider-image-box img {
     width: 100%;
+}
+
+.next-prev-buttons {
+    background: #fff;
+    width: 120px;
+    height: 120px;
+    color: black;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 100%;
+    right: 33.7%;
+    bottom: 35%;
+}
+
+.next-prev-buttons {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* Ensure buttons are above slides */
+}
+
+.next-prev-buttons button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.next-prev-buttons p {
+    font-weight: 500;
+    font-family: Helvetica-Neue;
+    font-size: 16px;
 }
