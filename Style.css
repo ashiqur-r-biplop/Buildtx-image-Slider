@@ -82,11 +82,13 @@
 
 .slider-image-box img {
     width: 100%;
+    object-fit: cover;
 }
 
 .next-prev-buttons {
-    position: fixed;
+    position: absolute;
     top: 50%;
+    right: 0%;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
@@ -99,7 +101,7 @@
     padding: 15px;
     z-index: 1;
     /* Ensure buttons are above slides */
-    right: 33.7%;
+    right: 30%;
 }
 
 .next-prev-buttons button {
@@ -177,3 +179,30 @@
     }
 
 }
+@media screen and (min-width: 769px) and (max-width: 1560px) {
+    .image-card-wrapper {
+        min-width: 33.4vw;
+        /* Take up full width on smaller screens */
+    }
+    .slider-image-box {
+        width: 33.4vw;
+    }
+    .next-prev-buttons {
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        background: #fff;
+        color: black;
+        border-radius: 50%;
+        padding: 15px;
+        z-index: 1;
+        /* Ensure buttons are above slides */
+        right: 26.6%;
+    }
+}
+/* Responsive */

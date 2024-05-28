@@ -25,8 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const isMobile = window.innerWidth < 768;
+    const tabAndLaptop = window.innerWidth > 768 && window.innerWidth < 1560;
 
     if (isMobile) {
+      sliderContent.style.transform = `translateX(-${
+        currentSlideIndex === 0
+          ? currentSlideIndex * slideWidth
+          : currentSlideIndex === 1
+          ? currentSlideIndex * slideWidth + 12
+          : currentSlideIndex === 2
+          ? currentSlideIndex * slideWidth + 24
+          : currentSlideIndex === 3
+          ? currentSlideIndex * slideWidth + 36
+          : currentSlideIndex * slideWidth
+      }px)`;
+    } else if(tabAndLaptop){
       sliderContent.style.transform = `translateX(-${
         currentSlideIndex === 0
           ? currentSlideIndex * slideWidth
