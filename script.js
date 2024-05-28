@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const sliderContent = document.querySelector(".slider-content");
   const slides = document.querySelectorAll(".image-card-wrapper");
-  const nextPrevButtonsMobile = document.getElementById(
-    "next-prev-buttons-mobile"
-  );
+
   const totalSlides = slides.length;
   let slideWidth = slides[0].offsetWidth;
   let currentSlideIndex = 0;
@@ -40,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
           ? currentSlideIndex * slideWidth + 36
           : currentSlideIndex * slideWidth
       }px)`;
-      nextPrevButtonsMobile.style.bottom = "0%";
-    //   nextPrevButtonsMobile.style.right = "0px";
     } else {
       sliderContent.style.transform = `translateX(-${
         currentSlideIndex === 0
@@ -59,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderContent.style.transition = "transform 0.5s ease-in-out";
 
     setTimeout(() => {
-      isAnimating = false; // Allow new animations after the current one finishes
-    }, 500); // Duration should match the transition duration
+      isAnimating = false;
+    }, 500);
   }
 
   function slideLeft() {
